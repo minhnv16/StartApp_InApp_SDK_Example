@@ -18,7 +18,7 @@
         <!-- TODO replace YOUR_APP_ID with actual value -->
         <meta-data
             android:name="com.startapp.sdk.APPLICATION_ID"
-            android:value="YOUR_APP_ID" />
+            android:value="204612115" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

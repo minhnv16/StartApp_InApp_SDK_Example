@@ -16,12 +16,18 @@ import com.startapp.sdk.adsbase.adlisteners.AdEventListener;
 
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity {
+
+    static {
+        System.loadLibrary("native-lib");
+    }
+    public native String stringFromJNI();
+
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
-
+        String tmp = stringFromJNI();
         // NOTE always use test ads during development and testing
-        StartAppSDK.setTestAdsEnabled(BuildConfig.DEBUG);
+        //StartAppSDK.setTestAdsEnabled(BuildConfig.DEBUG);
 
         setContentView(R.layout.main);
     }

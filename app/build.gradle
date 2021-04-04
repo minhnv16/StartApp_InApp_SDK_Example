@@ -4,19 +4,30 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 30
 
         applicationId 'com.example.app'
     }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+
 }
 
 dependencies {
     // noinspection GradleDynamicVersion
-    implementation 'com.startapp:inapp-sdk:4.6.+'
+    implementation 'com.startapp:inapp-sdk:4.8.4'
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+
+
 }

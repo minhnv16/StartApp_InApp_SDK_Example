@@ -38,7 +38,7 @@ public class RecyclerViewWithNativeAdActivity extends AppCompatActivity {
         super.onCreate(state);
 
         // NOTE always use test ads during development and testing
-        StartAppSDK.setTestAdsEnabled(BuildConfig.DEBUG);
+       // StartAppSDK.setTestAdsEnabled(BuildConfig.DEBUG);
 
         setContentView(R.layout.recycler_view);
 
